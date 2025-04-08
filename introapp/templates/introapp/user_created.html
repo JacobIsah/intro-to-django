@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Created</title>
+    </head>
+<body>
+    <h1>User Created Successfully</h1>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>First Name: {{ user.first_name }}</p>
+    <p>Last Name: {{ user.last_name }}</p>
+    <a href="{% url 'introapp:create_user' %}">Create another user</a>
+    <a href="{% url 'introapp:user_list' %}">View all users</a>
+</body>
